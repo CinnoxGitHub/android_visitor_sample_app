@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "577795968122",
+    "project_id": "mc-visitor-demo-prod",
+    "storage_bucket": "mc-visitor-demo-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577795968122:android:329f1b8fcb81ec709a7fc3",
+        "android_client_info": {
+          "package_name": "com.cinnox.visitorsampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577795968122-mqutktk2kljd01a5uu9or453gakj22jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJP-VwaQAlmTjuRXl0S0A3MT_1LpRqUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577795968122-mqutktk2kljd01a5uu9or453gakj22jd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577795968122-8rs28dnd25kgu2lgbdqqo1vjci5inln2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.m800.liveconnect.mobile.visitor"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577795968122:android:ee1df9969f3f09e39a7fc3",
+        "android_client_info": {
+          "package_name": "com.m800.liveconnect.mobile.visitor.prod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577795968122-mqutktk2kljd01a5uu9or453gakj22jd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJP-VwaQAlmTjuRXl0S0A3MT_1LpRqUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577795968122-mqutktk2kljd01a5uu9or453gakj22jd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "577795968122-8rs28dnd25kgu2lgbdqqo1vjci5inln2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.m800.liveconnect.mobile.visitor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,11 +8,12 @@ import com.cinnox.visitorsampleapp.push.XiaomiPushService
 import com.m800.cinnox.visitor.CinnoxVisitorCore
 import com.m800.cinnox.visitor.CinnoxVisitorCoreListener
 import com.m800.sdk.core.noti.CinnoxPushType
+import timber.log.Timber
 
 class MainApplication : Application() {
     companion object {
-        const val serviceId = "xxxx.cinnox.com"
         val pushType = CinnoxPushType.FCM
+        const val serviceId = "210b.cx-tb.cinnox.com"
     }
 
     private val mCoreListener: CinnoxVisitorCoreListener = object : CinnoxVisitorCoreListener {
@@ -29,5 +30,6 @@ class MainApplication : Application() {
             CinnoxPushType.XIAOMI -> XiaomiPushService().initialize(this)
             CinnoxPushType.HUAWEI -> HuaweiPushService().initialize(this)
         }
+        Timber.plant(M800DebugTree())
     }
 }

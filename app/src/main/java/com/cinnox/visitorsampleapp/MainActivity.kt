@@ -1,9 +1,11 @@
 package com.cinnox.visitorsampleapp
 
+import android.content.ComponentName
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.cinnox.visitorsampleapp.push.genFcmIntentPushData
 import com.cinnox.visitorsampleapp.push.genHuaweiIntentPushData
 import com.cinnox.visitorsampleapp.push.genXiaomiIntentPushData
@@ -16,10 +18,25 @@ class MainActivity : AppCompatActivity() {
         const val TAG = "MainActivity"
     }
 
+    private lateinit var ssoTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         handleClickedSystemNotification()
+        ssoTextView = findViewById(R.id.tv_sso)
+        ssoTextView.setOnClickListener {
+            val intent = Intent()
+            intent.component = ComponentName(
+                "com.m800.liveconnect.mobile.agent.tb.hkmtr", // this is Cinnox app package name
+                "com.m800.liveconnect.mobile.agent.ui.MainActivity" // this is Cinnox app activity which used for login
+            )
+            intent.putExtra("action", "login")
+            intent.putExtra("StaffId", "userStaffId")
+            intent.putExtra("StationCode", "userStationCode")
+            intent.putExtra("DisplayName", "userDisplayName")
+            startActivity(intent)
+        }
     }
 
     override fun onNewIntent(intent: Intent?) {
