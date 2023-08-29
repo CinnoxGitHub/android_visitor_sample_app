@@ -26,11 +26,13 @@ class MainActivity : AppCompatActivity() {
         handleClickedSystemNotification()
         ssoTextView = findViewById(R.id.tv_sso)
         ssoTextView.setOnClickListener {
-            val intent = Intent()
-            intent.component = ComponentName(
-                "com.m800.liveconnect.mobile.agent.tb.hkmtr", // this is Cinnox app package name
-                "com.m800.liveconnect.mobile.agent.ui.MainActivity" // this is Cinnox app activity which used for login
-            )
+            val intent = Intent().apply {
+                component = ComponentName(
+                    "com.m800.liveconnect.mobile.agent.tb.hkmtr", // this is Cinnox app package name
+                    "com.m800.liveconnect.mobile.agent.ui.MainActivity" // this is Cinnox app activity which used for login
+                )
+            }
+//            val intent = packageManager.getLaunchIntentForPackage("com.m800.liveconnect.mobile.agent.tb.hkmtr")!!
             intent.putExtra("action", "login")
             intent.putExtra("StaffId", "userStaffId")
             intent.putExtra("StationCode", "userStationCode")
