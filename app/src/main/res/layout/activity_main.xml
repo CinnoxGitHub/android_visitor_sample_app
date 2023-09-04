@@ -6,14 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_sso"
+    <EditText
+        android:id="@+id/et_staff_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/spacing_L"
-        android:text="sso"
+        android:text="userStaffId"
+        android:hint="user staff id"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_station_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_L"
+        android:text="userStationCode"
+        android:hint="user station code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_staff_id" />
+
+    <EditText
+        android:id="@+id/et_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_L"
+        android:text="userDisplayName"
+        android:hint="user display name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_station_code" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_L"
+        android:text="login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_display_name" />
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_L"
+        android:text="logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+    <TextView
+        android:id="@+id/tv_incoming_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_L"
+        android:text="incoming call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_logout" />
 
     <com.m800.cinnox.visitor.CinnoxVisitorWidget
         android:id="@+id/floating_button"
@@ -21,6 +75,7 @@
         android:layout_height="72dp"
         android:gravity="center"
         android:scaleType="fitCenter"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
