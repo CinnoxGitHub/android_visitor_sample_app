@@ -99,6 +99,7 @@ class MainActivity : AppCompatActivity() {
 //            )
 //        }
         val intent = packageManager.getLaunchIntentForPackage("com.m800.liveconnect.mobile.agent.tb.hkmtr")!!
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         return intent
     }
 
