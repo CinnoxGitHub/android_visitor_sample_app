@@ -2,21 +2,20 @@
 This guide will help you know how to use the CINNOX Visitor SDK on Android application through the sample app demonstration.
  
 ## **Step 1: Add Libraries and Dependencies**
-1. Add the following code snippet inside the repositories block to the app/build.gradle section:
+1. Add the following code snippet inside the repositories block:
    
 ```kotlin
-buildscript {
+
     repositories {
         maven { url 'https://jitpack.io' }
     }
-}
 ```
 This will include the JitPack repository in your project, allowing you to fetch dependencies from it.
 
 2. Add the following code snippet inside the dependencies block:
 
 ```kotlin
-implementation 'com.github.CinnoxGitHub:visitor_sdk:1.0.12'
+implementation 'com.github.CinnoxGitHub:visitor_sdk:1.0.19'
 ```
 This line specifies the dependency on the visitor_sdk library from the JitPack repository. 
 
@@ -60,7 +59,7 @@ Congratulations! You have successfully updated the dependencies using JitPack. T
  ```
 
 ## **Step 3: Show your CINNOX Widget to Users**
-Add CinnoxVisitorWidget in the layout activity_main.xml
+Add CinnoxVisitorWidget in the layout
 
 ```kotlin
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
